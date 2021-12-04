@@ -4,6 +4,7 @@ import './App.css';
 import Create from './pages/Create';
 import Read from './components/Read';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'antd/dist/antd.css';
 
 function App() {
 
@@ -13,9 +14,18 @@ function App() {
 
   return (
     <Fragment>
-      <Create  dataBase={dataBase} setDataBase={setDataBase}/>
-      <h1 className="text-center">Read</h1>
-      <Read dataBase={dataBase} setDataBase={setDataBase}/>
+      <div className="row">
+
+        <section className="col">
+          <Create  dataBase={dataBase} setDataBase={setDataBase}/>
+        </section>
+        
+        <section className="col">
+          <h3 className="text-center p-4">Read</h3>
+          <Read dataBase={dataBase} setDataBase={setDataBase}/>
+        </section> 
+
+      </div>   
     </Fragment>
   );
 }

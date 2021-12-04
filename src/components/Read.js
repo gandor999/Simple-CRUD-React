@@ -19,15 +19,14 @@ export default function Read({ dataBase, setDataBase }){
 
 
 	return (
-		<div className="p-5 container-fluid">
+		<div className="p-5">
 			<Table className="">
 			  <thead>
 			    <tr>
 			      <th>First Name</th>
 			      <th>Last Name</th>
 			      <th>Email</th>
-			      <th>Contact</th>
-			      <th>Edit / Delete</th>
+			      <th>Contact</th>     
 			    </tr>
 			  </thead>
 			  <tbody>

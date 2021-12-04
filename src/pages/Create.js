@@ -93,11 +93,12 @@ function Create({ dataBase, setDataBase }) {
 
   return (
     <Fragment>
-      <h1 className="text-center p-4">Create</h1>
-      <Form className="p-5">
+      <h3 className="text-center pt-4">Create</h3>
+      <Form className="p-5 m-5">
         <Form.Group className="mb-3" controlId="formFirstName">
           <Form.Label>First Name</Form.Label>
-          <Form.Control 
+          <Form.Control
+          className="rounded-pill"
           type="text" 
           placeholder="First Name" 
           value={firstName}
@@ -110,7 +111,8 @@ function Create({ dataBase, setDataBase }) {
 
         <Form.Group className="mb-3" controlId="formLastName">
           <Form.Label>Last Name</Form.Label>
-          <Form.Control 
+          <Form.Control
+          className="rounded-pill" 
           type="text" 
           placeholder="Last Name" 
           value={lastName}
@@ -123,7 +125,8 @@ function Create({ dataBase, setDataBase }) {
 
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
-          <Form.Control 
+          <Form.Control
+          className="rounded-pill" 
           type="email" 
           placeholder="Enter email" 
           value={email}
@@ -136,7 +139,8 @@ function Create({ dataBase, setDataBase }) {
 
         <Form.Group className="mb-3" controlId="formContact">
           <Form.Label>Contact No#</Form.Label>
-          <Form.Control 
+          <Form.Control
+          className="rounded-pill" 
           type="text" 
           placeholder="Contact No# eg. 91243516762" 
           value={contact}
@@ -149,11 +153,11 @@ function Create({ dataBase, setDataBase }) {
 
         {
           (isGood) ? 
-            <Button variant="primary" onClick={add}>
+            <Button className="m-3" variant="primary" onClick={add}>
               Add To Data
             </Button>
           :
-            <Button variant="secondary" disabled>
+            <Button className="m-3" variant="secondary" disabled>
               Add To Data
             </Button>
 

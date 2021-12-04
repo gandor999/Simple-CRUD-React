@@ -104,25 +104,25 @@ export default function TableData({ data, setDataBase, dataBase }){
 		
 
 		<Fragment>
-			<tr>
-				<td>
+			<tr className="">
+				<td className="pt-3">
 					{data.firstName}
 				</td>
 
-				<td>
+				<td className="pt-3">
 					{data.lastName}
 				</td>
 
-				<td>
+				<td className="pt-3">
 					{data.email}
 				</td>
 
-				<td>
+				<td className="pt-3">
 					{data.contact}
 				</td>
 
 				<td>
-					<Button className="mr-5" onClick={handleShow}>Edit</Button> <Button variant="danger" className="ml-5" onClick={() => remove(data.id)}>Delete</Button>
+					<Button className="m-1" onClick={handleShow}>Edit</Button> <Button variant="danger" className="m-1" onClick={() => remove(data.id)}>X</Button>
 				</td>
 			</tr>
 
