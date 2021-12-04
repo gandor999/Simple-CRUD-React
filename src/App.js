@@ -1,24 +1,22 @@
-import logo from './logo.svg';
+import { Fragment, useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
 import './App.css';
+import Create from './pages/Create';
+import Read from './components/Read';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  const [dataBase, setDataBase] = useState([]);
+
+  console.log(dataBase);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Create  dataBase={dataBase} setDataBase={setDataBase}/>
+      <h1 className="text-center">Read</h1>
+      <Read dataBase={dataBase} setDataBase={setDataBase}/>
+    </Fragment>
   );
 }
 
